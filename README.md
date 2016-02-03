@@ -1,2 +1,5 @@
 # weekly-webdev-challenge-3
-Treehouse-Home psd
+
+Free PSD teamplate: Treehouse-Home
+
+Trying to code using BEM
