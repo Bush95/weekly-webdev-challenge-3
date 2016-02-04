@@ -164,7 +164,7 @@
     display: inline-block;
     text-align: center;
     font: 700 14.84px @h-font;
-    text-decoration: none
+    text-decoration: none;
     margin: 0 auto;
     text-transform: uppercase;
     text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.7);
@@ -186,10 +186,99 @@
     border: 3px solid #fff;
 }
 .btn--green{
-    background: #7cc576;
+    background: @extra-color;
     color: #fff; 
 }
 
-body{
-    background: #909090; //
+.section-services__header{
+    text-align: center;
+    h2{
+        font: 700 40px / 40px @h-font;
+        margin: 100px 0 25px 0;
+        text-transform: uppercase;
+        color: @h-font-color;
+    }
+    p{
+        font:400 20px @p-font;
+        margin: 0 0 85px 0;
+        color: @p-font-color;
+    }
+}
+.section-services__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    @media @sm{
+        flex-direction: row;
+    }
+}
+.section-services__item{
+    text-align: center;
+    margin-bottom: 100px;
+    width: 90%;
+    @media @sm{
+        width: 274px;
+    }
+    h4{
+        font: 700 18px / 18px @h-font;
+        margin: 40px 0 20px 0;
+        color: @h-font-color;
+        text-transform: uppercase;
+    }
+    p{
+        margin: 0;
+        font: 400 13px / 22px @p-font;
+        color: @p-font-color;
+    }
+}
+.text-green{
+    color: @extra-color;
+}
+.section-blog{
+    height: 616px;
+    display: flex;
+    flex-direction: column;
+    @media @sm{
+        flex-direction: row;
+    }
+}
+.section-blog__left-bg, .section-blog__right-item{
+    background-size: 100% auto;
+    background-position: center;
+}
+.section-blog__left-bg{
+    flex-basis: 32%;
+    background-image: url(../images/bg_left-slide-mobile.jpg);
+    @media @sm{
+        background-image: url(../images/bg_left-slide.jpg);
+    }
+}
+.section-blog__right-item{
+    flex-basis:68%;
+    background: url(../images/bg_right-slide.jpg) /cover;
+}
+.section-blog__jumbotron{
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    h2{
+        font: 700 40px @h-font;
+        color: #fff;
+        margin: 0;
+    }
+    p,.section-blog__list-item{
+        font:400 16px @p-font;
+        color: #ccc;
+    list-style-image: url(../images/list-style-image.png);
+    }
+    @media @sm{
+        padding: 100px;
+    }
+}
+.section-blog__blog-list{
+    padding: 0;
+    margin-bottom: 50px;
 }
