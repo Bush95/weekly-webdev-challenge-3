@@ -1,0 +1,127 @@
+@sm:      ~"only screen and (min-width: 768px)";
+@md:      ~"only screen and (min-width: 992px)";
+@lg:     ~"only screen and (min-width: 1200px)";
+@p-font-color: #777;
+@h-font-color: #222;
+@extra-color: #7cc576;
+
+.clearfix(){
+    &::after{
+       display: block;
+        content: ' ';
+        clear: both;
+        width: 100%;
+    }
+}
+
+.container{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+    @media @md{
+        margin: 0 auto;
+        width: 968px;
+        padding: 0;
+    }
+}
+
+.menu{
+    background-color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+}
+.menu__container{
+    padding-top: 20px;
+    @media @md{
+        padding-top: 40px;
+    }
+}
+.menu__header{
+    padding-bottom: 20px;
+    .clearfix();
+    @media @sm{
+        display: inline-block;
+    }
+    @media @md{
+        padding-bottom: 35px;
+    }
+}
+.menu__company-logo{
+    float: left;
+    margin: 0;
+}
+.menu__header-link{
+    text-decoration: none;
+    .clearfix();
+}
+.menu__company-name{
+    font: 400 18px 'Montserrat';
+    color: #555;
+    display: inline-block;
+    position:relative;
+    top: -8px;
+}
+.menu__trigger{
+    visibility: visible;
+    float: right;
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 36px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.7);
+    @media @sm{
+        visibility: hidden;
+    }
+}
+.menu__trigger::before{
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 8px;
+  width: 24px;
+  height: 4px;
+  border-top: 10px double #222;
+  border-bottom: 3px solid #222;
+}
+
+
+.menu__row{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: none;
+    @media @sm{
+        display: inline-block !important;
+        float: right;
+    }
+}
+.menu__collapsed{
+    @media @sm{
+        float: right;
+        margin-top: -6px;
+        .clearfix();
+    }
+}
+.menu__list{
+    position: relative;
+    @media @sm{
+        display: inline-block;
+    }
+}
+.menu__link{
+    text-decoration: none;
+    color: #6d6d6d;
+    display: block;
+    font: 400 14px 'Montserrat';
+    color:#777;
+    padding: 12px 0;
+    @media @sm{
+        margin-right: 35px;
+    }
+}
+
+body{
+    background: #292929; //
+}
