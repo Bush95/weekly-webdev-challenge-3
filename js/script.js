@@ -5,10 +5,10 @@ $(".js_trigger, .menu__link").on('click',function(){
         $('.js_menu').toggle('fast');
 });
 
-$('.menu__link').on('click', function(event){
+$('.menu__link, .section-title__header>.btn').on('click', function(event){
     if (is_mobile){ 
         $('html, body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top - $(".menu__header").height()
+            scrollTop: $($.attr(this, 'href')).offset().top - $(".menu__header").height() // substract fixed menu height
         }, 500);
         return false;
     }
