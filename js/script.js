@@ -53,5 +53,6 @@ function track_menu(menu_li_class, menu_li_active_class, positive_margin) {
 $(document).ready(function(){
     toggle_menu();
     smooth_menu_scroll();
-    track_menu('menu__link','menu__link--active', '100');
+    if (is_mobile)
+        track_menu('menu__link','menu__link--active', '100');
 });

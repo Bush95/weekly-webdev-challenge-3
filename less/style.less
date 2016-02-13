@@ -172,7 +172,7 @@ serif;
     text-align: center;
     display: none;
     @media @sm {
-        display: inline-block;
+        display: inline-block !important; 
         margin-top: 10px;
     }
     @media @md {
@@ -247,8 +247,10 @@ serif;
 .section-services__header {
     .header-font-mixin();
     margin-bottom: 85px;
-    h2{
-        font-size: 25px;
+    @media screen and (max-width: 768px){
+        h2{
+            font-size: 25px;
+        }
     }
 }
 .section-services__container {
